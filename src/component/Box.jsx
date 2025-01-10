@@ -165,6 +165,7 @@ export default function Box() {
     const content = editorState.getCurrentContent();
     const Rawcontent = convertToRaw(content);
     localStorage.setItem("content", JSON.stringify(Rawcontent));
+    alert("your content is saved")
   }
 
   const styleMap = {
@@ -181,7 +182,7 @@ export default function Box() {
           <div>
             <button
               onClick={SaveContent}
-              style={{ boxShadow: "4px 5px 2px black",width:"120px", height:"30px", border:"3px solid black",marginLeft:'350px'}}
+              style={{ boxShadow: "4px 5px 2px black",width:"120px", height:"30px", border:"3px solid black",marginLeft:'350px',cursor:"pointer"}}
               >
               Save
             </button>
